@@ -41,10 +41,9 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
+let navA = document.querySelectorAll(["a"]);
 
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
-let navA = document.querySelectorAll(["a"]);
 
 navA[0].textContent = ('a', siteContent["nav"]["nav-item-1"]);
 navA[1].textContent = ('a', siteContent["nav"]["nav-item-2"]);
@@ -60,6 +59,32 @@ let ctaImg = document.getElementById("cta-img");
 ctaH1.textContent = ('h1', siteContent["cta"]["h1"]);
 ctaButton.textContent = ('button', siteContent["cta"]["button"]);
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let mainH4 = document.querySelectorAll("h4");
+let topContentP = document.querySelectorAll(".top-content p")
+let middleImg = document.getElementById("middle-img");
+let bottomContentP = document.querySelectorAll(".bottom-content p");
+
+mainH4[0].textContent = ('h4', siteContent["main-content"]["features-h4"]);
+topContentP[0].textContent = ('p', siteContent["main-content"]["features-content"]);
+mainH4[1].textContent = ('h4', siteContent["main-content"]["about-h4"]);
+topContentP[1].textContent = ('p', siteContent["main-content"]["about-content"]);
+
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+mainH4[2].textContent = ('h4', siteContent["main-content"]["services-h4"]);
+bottomContentP[0].textContent = ('p', siteContent["main-content"]["services-content"]);
+mainH4[3].textContent = ('h4', siteContent["main-content"]["product-h4"]);
+bottomContentP[1].textContent = ('p', siteContent["main-content"]["product-content"]);
+mainH4[4].textContent = ('h4', siteContent["main-content"]["vision-h4"]);
+bottomContentP[2].textContent = ('p', siteContent["main-content"]["vision-content"]);
+
+
+
+
+
+
+
 
 
 // Failed attempt at making a for-in loop to add nav elemetns: 
