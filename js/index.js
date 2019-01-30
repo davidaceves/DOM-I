@@ -41,4 +41,55 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
+
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navA = document.querySelectorAll(["a"]);
+
+navA[0].textContent = ('a', siteContent["nav"]["nav-item-1"]);
+navA[1].textContent = ('a', siteContent["nav"]["nav-item-2"]);
+navA[2].textContent = ('a', siteContent["nav"]["nav-item-3"]);
+navA[3].textContent = ('a', siteContent["nav"]["nav-item-4"]);
+navA[4].textContent = ('a', siteContent["nav"]["nav-item-5"]);
+navA[5].textContent = ('a', siteContent["nav"]["nav-item-6"]);
+
+let ctaH1 = document.querySelector("h1");
+let ctaButton = document.querySelector("button"); 
+let ctaImg = document.getElementById("cta-img"); 
+
+ctaH1.textContent = ('h1', siteContent["cta"]["h1"]);
+ctaButton.textContent = ('button', siteContent["cta"]["button"]);
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+// Failed attempt at making a for-in loop to add nav elemetns: 
+
+// const obj = siteContent.nav;
+
+// for (let key in obj) {
+//   let value = obj[key];
+//   console.log(value)
+//   navA[obj].textContent = ('a', siteContent[]);
+// }
+
+
+// for (let i = 0; i < navA.length; i++) {
+//   for (let key in obj) {
+//     let value = obj[key];
+//     console.log(value)
+//     navA[i].textContent = ('a', value);
+//   }
+// }
+
+// for (let i = 0; i < navA.length; i++) {
+
+//   for (let key in obj) {
+//     let value = obj[key];
+
+//     navA[i].textContent += ('a', value);
+//   }
+// }
+
+
+
+
