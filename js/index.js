@@ -41,24 +41,23 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-let navA = document.querySelectorAll(["a"]);
+let navA = document.querySelectorAll("a");
 let nav = document.querySelector('nav')
 
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-navA[0].textContent = ('a', siteContent["nav"]["nav-item-1"]);
-navA[1].textContent = ('a', siteContent["nav"]["nav-item-2"]);
-navA[2].textContent = ('a', siteContent["nav"]["nav-item-3"]);
-navA[3].textContent = ('a', siteContent["nav"]["nav-item-4"]);
-navA[4].textContent = ('a', siteContent["nav"]["nav-item-5"]);
-navA[5].textContent = ('a', siteContent["nav"]["nav-item-6"]);
+let navItems = siteContent.nav;
 
+const navArray = [];
 
-for (let i = 0; i < navA.length; i++) {
-  navA[i].style.color = "green";
+for (let key in navItems) {
+  navArray.push(navItems[key]);
 }
 
-console.log(nav.parentNode);
+for (let i = 0; i < navArray.length - 1; i++) {
+  navA[i].textContent = navArray[i];
+  navA[i].style.color = "green";
+}
 
 function appendChild (navItem) {
   let node = document.createElement("a");
@@ -130,46 +129,6 @@ let footer = document.querySelector("footer");
 footer.textContent = ('p', siteContent["footer"]["copyright"])
 
 
-
-
-
-// let splitH1 = ctaH1.textContent.split("");
-
-// for (let i = 0; i < splitH1.length; i++) {
-//   if (splitH1[i] === ' ') {
-//     splitH1[i] += lineBR;
-//   }
-// }
-
-// ctaH1.textContent = ('h1', splitH1.join(''));
-
-// Failed attempt at making a for-in loop to add nav elemetns: 
-
-// const obj = siteContent.nav;
-
-// for (let key in obj) {
-//   let value = obj[key];
-//   console.log(value)
-//   navA[obj].textContent = ('a', siteContent[]);
-// }
-
-
-// for (let i = 0; i < navA.length; i++) {
-//   for (let key in obj) {
-//     let value = obj[key];
-//     console.log(value)
-//     navA[i].textContent = ('a', value);
-//   }
-// }
-
-// for (let i = 0; i < navA.length; i++) {
-
-//   for (let key in obj) {
-//     let value = obj[key];
-
-//     navA[i].textContent += ('a', value);
-//   }
-// }
 
 
 
