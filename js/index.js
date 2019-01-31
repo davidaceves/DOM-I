@@ -50,10 +50,12 @@ let navItems = siteContent.nav;
 
 const navArray = [];
 
+// for in loop pushes value of nav-item into a new array
 for (let key in navItems) {
   navArray.push(navItems[key]);
 }
 
+// for loop adds the values from the navArray to the anchor text
 for (let i = 0; i < navArray.length - 1; i++) {
   navA[i].textContent = navArray[i];
   navA[i].style.color = "green";
