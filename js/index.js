@@ -87,13 +87,17 @@ function prepend (navItem) {
 
 prepend("Home");
 
-// let lineBR = document.createElement("BR"); // tried to create line break element
-
 let ctaH1 = document.querySelector("h1");
 let ctaButton = document.querySelector("button"); 
-let ctaImg = document.getElementById("cta-img"); 
+let ctaImg = document.getElementById("cta-img");
 
-// ctaH1.textContent = ('h1', siteContent["cta"]["h1"]); // original code without line breaks
+// event listener
+
+ctaButton.addEventListener("click", function() {
+  let body = document.querySelector("body");
+  body.style.backgroundColor = "lightgray";
+})
+
 
 ctaH1.innerHTML = 'DOM <br> IS <BR> AWESOME';
 ctaButton.textContent = ('button', siteContent["cta"]["button"]);
